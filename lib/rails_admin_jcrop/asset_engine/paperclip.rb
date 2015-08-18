@@ -20,7 +20,7 @@ module Paperclip
 
       self.attachment_definitions.each do |name, options|
         options[:processors] ||= []
-        options[:processors] << :rails_admin_jcropper
+        options[:processors].unshift(:rails_admin_jcropper)
       end
     end
   end
